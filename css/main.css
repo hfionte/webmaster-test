@@ -1,0 +1,356 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.7;
+	background: #B2DAFE;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 1.5em;
+	margin: 0;
+}
+h1 strong {
+	font-weight: normal;
+	font-size: 2.5em;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 2em;
+	margin: 0 0 0.5em 0;
+	line-height: 1.3;
+}
+
+a {
+	color: #0760BB;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+a.button {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-weight: bold;
+	background: #044990;
+	color: #fff;
+}
+a.button:hover {
+	text-decoration: none;
+	background: #083568;
+}
+
+.left {
+	float: left;
+	width: 48%;
+}
+.right {
+	float: right;
+	width: 48%;
+}
+
+.center {
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* Layout
+========================== */
+.section-wrapper,
+.title,
+.intro {
+	padding: 50px;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+	position: relative;
+}
+.section-content,
+#footer p {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.section-wrapper {
+	position: relative;
+	z-index: 10;
+	background: #fff;
+	box-sizing: border-box;
+}
+#google-news {
+	margin-top: 600px;
+}
+.image-group {
+	position: relative;
+	height: 0;
+	width: 100%;
+	padding-bottom: 60%;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.image-group img {
+	width: 100%;
+}
+
+/* Section styles
+========================== */
+#intro-panel {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	min-height: 500px;
+	color: #044990;
+	margin-top: 0;
+}
+.title {
+	background: #044990;
+	color: #fff;
+	border-bottom: 0;
+	box-shadow: none;
+}
+.intro {
+	border-bottom: 0;
+	box-shadow: none;
+}
+#intro-panel em {
+	font-family: 'Satisfy', cursive;
+	font-size: 50px;
+	font-style: normal;
+}
+
+/* Google News, Google Images, Product Search */
+#google-news img.pointer,
+#google-images img.pointer,
+#product-search img.pointer {
+	position: absolute;
+	width: auto;
+	top: 4%;
+	right: 4%;
+	opacity: 1;
+	z-index: 2;
+	-webkit-transition: top 2s, right 2s, opacity 500ms 0s;
+	transition: top 2s, right 2s, opacity 500ms 0s;
+}
+#google-images img.pointer {
+	top: 3%;
+	right: 23%;
+}
+#product-search img.pointer {
+	top: 8%;
+	right: 33%;
+}
+#google-news.focused img.pointer,
+#google-images.focused img.pointer,
+#product-search.focused img.pointer {
+	top: 35%;
+	right: 40%;
+	opacity: 0;
+	-webkit-transition: top 2s, right 2s, opacity 500ms 2.1s;
+	transition: top 2s, right 2s, opacity 500ms 2.1s;
+}
+#google-images.focused img.pointer {
+	top: 53%;
+	right: 58%;
+}
+#product-search.focused img.pointer {
+	top: 5%;
+	right: 3%;
+}
+#google-news img.screenshot,
+#google-images img.screenshot,
+#product-search img.screenshot {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+#google-news img.fadeout,
+#google-images img.fadeout,
+#product-search img.fadeout {
+	opacity: 1;
+	-webkit-transition: opacity 500ms 0s;
+	transition: opacity 500ms 0s;
+}
+#google-news.focused img.fadeout,
+#google-images.focused img.fadeout,
+#product-search.focused img.fadeout {
+	opacity: 0;
+	-webkit-transition: opacity 500ms 2.1s;
+	transition: opacity 500ms 2.1s;
+}
+
+/* Google Toolbar */
+#google-toolbar img {
+	position: absolute;
+}
+#google-toolbar img.fadeout {
+	opacity: 1;
+	-webkit-transition: opacity 500ms 1s;
+	transition: opacity 500ms 0s;
+}
+#google-toolbar.focused img.fadeout {
+	opacity: 0;
+}
+
+/* Google Groups */
+img.star {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 40px;
+	margin-left: -20px;
+	opacity: 0;
+	-webkit-transition: opacity 500ms 1700ms;
+	transition: opacity 500ms 1700ms;
+}
+img.two-star {
+	left: 30%;
+	-webkit-transition: opacity 500ms 1400ms;
+	transition: opacity 500ms 1400ms;
+}
+img.three-star {
+	left: 50%;
+	-webkit-transition: opacity 500ms 1100ms;
+	transition: opacity 500ms 1100ms;
+}
+img.four-star {
+	left: 70%;
+	-webkit-transition: opacity 500ms 800ms;
+	transition: opacity 500ms 800ms;
+}
+img.five-star {
+	left: 90%;
+	-webkit-transition: opacity 500ms 500ms;
+	transition: opacity 500ms 500ms;
+}
+#google-groups.focused img.star {
+	opacity: 1;
+	-webkit-transition: opacity 500ms 500ms;
+	transition: opacity 500ms 500ms;
+}
+#google-groups.focused img.two-star {
+	-webkit-transition: opacity 500ms 800ms;
+	transition: opacity 500ms 800ms;
+}
+#google-groups.focused img.three-star {
+	-webkit-transition: opacity 500ms 1100ms;
+	transition: opacity 500ms 1100ms;
+}
+#google-groups.focused img.four-star {
+	-webkit-transition: opacity 500ms 1400ms;
+	transition: opacity 500ms 1400ms;
+}
+#google-groups.focused img.five-star {
+	-webkit-transition: opacity 500ms 1700ms;
+	transition: opacity 500ms 1700ms;
+}
+
+/* Search Further */
+#search-further .todo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.todo.fadeout {
+	z-index: 2;
+	opacity: 1;
+	-webkit-transition: opacity 500ms 0;
+	transition: opacity 500ms 0;
+}
+#search-further .check {
+	position: absolute;
+	top: 30%;
+	left: 3%;
+	z-index: 3;
+	width: 10%;
+	opacity: 0;
+	-webkit-transition: opacity 500ms 2s;
+	transition: opacity 500ms 2s;
+}
+#search-further .check.check-two {
+	top: 49%;
+	-webkit-transition: opacity 500ms 1s;
+	transition: opacity 500ms 1s;
+}
+#search-further.focused .check {
+	opacity: 1;
+	-webkit-transition: opacity 500ms 0ms;
+	transition: opacity 500ms 0ms;
+}
+#search-further.focused .check.check-two {
+	-webkit-transition: opacity 500ms 1s;
+	transition: opacity 500ms 1s;
+}
+#search-further.focused .todo.fadeout {
+	opacity: 0;
+	-webkit-transition: opacity 500ms 2s;
+	transition: opacity 500ms 2s;
+}
+
+/* Beyond */
+#beyond {
+	background: #044990;
+	color: #fff;
+	border-bottom: 0;
+}
+#beyond a {
+	color: #B2DAFE;
+}
+#beyond a:hover {
+	color: #fff;
+}
+#beyond a.button {
+	color: #fff;
+	background: #083568;
+}
+#beyond a.button:hover {
+	background: #052348;
+}
+#beyond em {
+	font-family: 'Satisfy', cursive;
+	font-size: 50px;
+	font-style: normal;
+	display: block;
+	text-align: center;
+}
+
+/* Footer */
+#footer {
+	position: relative;
+	z-index: 10;
+	padding: 20px 50px;
+	color: #044990;
+}
+
+/* Mobile styles
+========================== */
+@media (max-width: 800px) {
+	.left, .right {
+		width: 100%;
+		float: none;
+	}
+	.section-wrapper,
+	.title,
+	.intro {
+		padding: 50px 20px;
+	}
+	#footer {
+		padding: 20px;
+	}
+}

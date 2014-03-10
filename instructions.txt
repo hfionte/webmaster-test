@@ -1,0 +1,6 @@
+___Tour Exercise___
+Attached is a document (tour.doc) with copy for a tour promoting our services. The goal is to deliver a well-designed page using this content.  In doing so please revise, remove or add any content (copy, screenshots, links) as appropriate.
+
+Note that this exercise is intended to test your coding skills and not necessarily design skills so it's fine to include placeholder images if needed. Please avoid the use of 3rd party libraries other than Google APIs/Libraries/Frameworks.
+
+Please return all materials (html, images, css, etc.) in a zipped file to webmaster-test@google.com and cc me by end of the day Friday 3/7/14.
